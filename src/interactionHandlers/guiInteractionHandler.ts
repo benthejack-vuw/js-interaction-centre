@@ -61,7 +61,7 @@ export default class GUIInteractionHandler extends InteractionHandler{
 
 }
 
-class GUICallback{
+export class GUICallback{
 
 	private _callbackWrapper: (ev:UIEvent)=>any;
 
