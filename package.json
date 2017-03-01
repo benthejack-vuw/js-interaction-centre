@@ -4,6 +4,9 @@
   "description": "js interaction centre is an interaction event manager that controls mouse, keyboard, HTML form elements, and eventually touch events. It makes creating complex interactions such as keyboard combinations, mouse control, and setting up HTML input elements a lot easeir by defining interactions and callbacks in JSON files.",
   "main": "lib/interaction_centre.min.js",
   "typings": "lib/interaction_centre",
+  "files": [
+      "lib/"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/benthejack-vuw/js-interaction-centre"
