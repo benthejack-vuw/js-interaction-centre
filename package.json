@@ -5,7 +5,7 @@
   "main": "lib/interaction_centre.min.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/benthejack-vuw/catseye_grid_builder"
+    "url": "https://github.com/benthejack-vuw/js-interaction-centre"
   },
   "scripts": {
     "prepublish": "webpack"
