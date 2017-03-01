@@ -1,0 +1,9 @@
+{
+  "version": "2.2.1",
+  "compilerOptions": {
+    "target": "ES2015",
+    "noImplicitAny": true,
+    "sourceMap": true
+  },
+  "exclude": ["node_modules"]
+}
