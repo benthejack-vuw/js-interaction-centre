@@ -1,11 +1,12 @@
-import {Point} from "../point"
+import {Point} from "bj_utils"
+import {MutableMouseData} from "bj_utils"
+import {Transform} from "bj_utils"
+import {MouseButton} from "bj_utils"
+import {MouseButtonConverter} from "bj_utils"
+import {MouseData} from "bj_utils"
 import {InteractionHandler} from "./interactionHandler"
 import {InteractionEventType} from "./interactionHandler"
-import {MutableMouseData} from "../mouseData"
-import {Transform} from "../transform"
-import {MouseButton} from "../mouseData"
-import {MouseButtonConverter} from "../mouseData"
-import {MouseData} from "../mouseData"
+
 
 export class MouseInteractionHandler extends InteractionHandler{
 
