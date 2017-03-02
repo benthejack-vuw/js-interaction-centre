@@ -1,7 +1,7 @@
-import DataError from "./data_error"
+import {DataError} from "./data_error"
 
 // Mutable point objects.
-export default class Point {
+export class Point {
     constructor(public x: number, public y: number) { }
 
     // Construct a point from an object containing x and y coordinates.

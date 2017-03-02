@@ -13,7 +13,7 @@ var interaction_key_bindings:any = {
 	"93":"meta"
 };
 
-export default class KeyboardInteractionHandler extends InteractionHandler{
+export class KeyboardInteractionHandler extends InteractionHandler{
 
 	private _pressedKeys:any;
 	private _pressCombos:Array<KeyComboBinding> = [];

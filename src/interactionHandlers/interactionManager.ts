@@ -1,7 +1,7 @@
-import Transform from "../transform"
-import GUIInteractionHandler from "./guiInteractionHandler"
-import KeyboardInteractionHandler from "./keyboardInteractionHandler"
-import MouseInteractionHandler from "./mouseInteractionHandler"
+import {Transform} from "../transform"
+import {GUIInteractionHandler} from "./guiInteractionHandler"
+import {KeyboardInteractionHandler} from "./keyboardInteractionHandler"
+import {MouseInteractionHandler} from "./mouseInteractionHandler"
 import * as DomUtils from "../domUtils"
 
 
@@ -18,7 +18,7 @@ import * as DomUtils from "../domUtils"
 *	all rights reserved Ben Jack
 */
 
-export default class InteractionManager{
+export class InteractionManager{
  	
  	private _keyboardManager:KeyboardInteractionHandler;
 	private _mouseManager:MouseInteractionHandler;

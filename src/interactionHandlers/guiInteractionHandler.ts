@@ -1,7 +1,7 @@
 import {InteractionHandler} from "./interactionHandler"
 
 
-export default class GUIInteractionHandler extends InteractionHandler{
+export class GUIInteractionHandler extends InteractionHandler{
 
 	protected _GUICallbacks:Array<GUICallback>;
 

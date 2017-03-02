@@ -1,13 +1,13 @@
-import Point from "../point"
+import {Point} from "../point"
 import {InteractionHandler} from "./interactionHandler"
 import {InteractionEventType} from "./interactionHandler"
 import {MutableMouseData} from "../mouseData"
-import Transform from "../transform"
+import {Transform} from "../transform"
 import {MouseButton} from "../mouseData"
 import {MouseButtonConverter} from "../mouseData"
 import {MouseData} from "../mouseData"
 
-export default class MouseInteractionHandler extends InteractionHandler{
+export class MouseInteractionHandler extends InteractionHandler{
 
 	private _mouseData:MutableMouseData;
 	private _transformMatrix:Transform;

@@ -21,9 +21,9 @@
 
 // Remember that this does not account for any CSS transforms applied to the canvas
 
-import Point from "./point";
+import {Point} from "./point";
 
-export default class Transform{
+export class Transform{
 
   protected m: Array<number>;
 
