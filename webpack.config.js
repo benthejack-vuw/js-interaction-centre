@@ -2,10 +2,10 @@ const path = require("path");
 const webpack = require("webpack");
 
 module.exports = {
-  entry: ["babel-polyfill", path.join(__dirname, "src/interaction_centre.ts")],
+  entry: [path.join(__dirname, "src/interactionCentre.ts")],
   output: {
     path: path.resolve(__dirname, "lib"),
-    filename: "interaction_centre.min.js"
+    filename: "interactionCentre.min.js"
   },
   resolve: {
     extensions: [".js", ".ts"]

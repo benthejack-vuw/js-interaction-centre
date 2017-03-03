@@ -1,10 +1,10 @@
 const path = require("path");
 
 module.exports = {
-  entry: ["babel-polyfill", path.join(__dirname, "src/interaction_centre.ts")],
+  entry: [path.join(__dirname, "src/interactionCentre.ts")],
   output: {
-    path: __dirname,
-    filename: "lib/interaction_centre.min.js"
+    path: path.resolve(__dirname, "lib"),
+    filename: "interactionCentre.min.js"
   },
   resolve: {
     extensions: ["", ".js", ".ts"]
