@@ -1,6 +1,6 @@
 {
   "name": "interaction-centre",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "interaction centre is an interaction event manager that controls mouse, keyboard, HTML form elements, and eventually touch events. It makes creating complex interactions such as keyboard combinations, mouse control, and setting up HTML input elements easy",
   "main": "lib/interactionCentre.js",
   "typings": "lib/interactionCentre",
