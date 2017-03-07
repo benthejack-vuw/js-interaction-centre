@@ -1,3 +1,5 @@
+import {Point} from "bj-utils"
+
 export enum MouseButton{
 	"none" = 0,
 	"left",
@@ -25,8 +27,8 @@ export namespace MouseButtonConverter {
 
 export class MouseData{
 
-	protected _position:any;
-	protected _lastPosition:any;
+	protected _position:Point;
+	protected _lastPosition:Point;
 	protected _buttons:any;
 
 	constructor(){
@@ -62,11 +64,11 @@ export class MutableMouseData extends MouseData{
 
 	constructor(){ super(); }
 
-	public update(position:any){
+	public update(position:Point){
 		if(this._position !== undefined) {
 			this._lastPosition = this.position;
 		}
-		this._position = {x:position.x, y:position.y};
+		this._position = position.copy();
 	}
 
 	public setButton(button:MouseButton, value:boolean):void{
