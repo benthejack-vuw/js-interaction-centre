@@ -1,0 +1,60 @@
+{
+
+	"keyboard":{
+
+		"press":{
+			"any":"pressed_any_key",
+			"control": "pressed_control",
+			"p":"pressed_p",
+			"P":"pressed_cap_p",
+			"control+b":"pressed_control_b",
+			"control+alt+shift+b":"pressed_control_alt_shift_b",
+			"arrowright":"pressed_rightarrow",
+			"a+b+c":"pressed_a_b_c"
+		},
+		"release":{
+			"x":"x_released"
+		}
+	},
+
+	"mouse":{
+		"click":{
+			"left":"clicked_mouse",
+			"right":"clicked_mouse",
+			"middle":"clicked_mouse"
+		},
+
+		"press":{
+			"left":"pressed_left_mouse_button",
+			"right":"pressed_left_mouse_button",
+			"middle":"pressed_left_mouse_button"
+		},
+
+
+		"drag":"mouse_dragged",
+		"move":"mouse_moved"
+	},
+
+	"gui":{
+
+		"test1":{
+			"callbacks":{
+				"input":"slider_changed"
+			},
+			"attributes":{
+				"min":0.001,
+				"max":1,
+				"value":0.5,
+				"step":0.001
+			}
+		},
+
+		"press-me":{
+			"callbacks":{
+				"click":"pressed_button"
+			}
+		}
+
+
+	}
+}
