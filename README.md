@@ -1,42 +1,51 @@
 #JS Interaction Centre 
+
 js interaction centre is a lightweight (26KB) interaction event manager that makes setting up complex interactions such as keyboard combinations, mouse interactions, and HTML input element interaction events simple through the use of JSON files that link events to callbacks.
 
 This module is written in typescript so has type-definitions in-built. It can be used modularly or as a javascript global.
 
 #API
 	
-	InteractionManager (combines all interaction handlers)
-	```new interactionCentre.InteractionManager(
-		callback_object:Object,
-		listener_element:HTMLElement,
-		path_to_interactions_json:string
-	);```
+InteractionManager (combines all interaction handlers)
+```
+new interactionCentre.InteractionManager(
+	callback_object:Object,
+	listener_element:HTMLElement,
+	path_to_interactions_json:string
+);
+```
 
-	KeyboardInteractionHandler
-	```new interactionCentre.KeyboardInteractionManager(
-		callback_object:Object,
-		listener_element:HTMLElement,
-		path_to_interactions_json:string
-	);```
+KeyboardInteractionHandler
+```
+new interactionCentre.KeyboardInteractionManager(
+	callback_object:Object,
+	listener_element:HTMLElement,
+	path_to_interactions_json:string
+);
+```
 
-	MouseInteractionHandler
-	```new interactionCentre.MouseInteractionManager(
-		callback_object:Object,
-		listener_element:HTMLElement,
-		path_to_interactions_json:string
-	);```
+MouseInteractionHandler
+```
+new interactionCentre.MouseInteractionManager(
+	callback_object:Object,
+	listener_element:HTMLElement,
+	path_to_interactions_json:string
+);
+```
 
-	GUIInteractionHandler
-	```new interactionCentre.GUIInteractionManager(
-		callback_object:Object,
-		path_to_interactions_json:string
-	);```
-	
-	_callback_object_ is an object or scope that contains the callback functions linked to by the interactions json file.
+GUIInteractionHandler
+```
+new interactionCentre.GUIInteractionManager(
+	callback_object:Object,
+	path_to_interactions_json:string
+);
+```
 
-	_listener_element_ is the element that listens for the event, and that event data (eg.. mouse position) is relative to.
+_callback_object_ is an object or scope that contains the callback functions linked to by the interactions json file.
 
-	_path_to_interactions_json_ is the path to your interaction definitions.
+_listener_element_ is the element that listens for the event, and that event data (eg.. mouse position) is relative to.
+
+_path_to_interactions_json_ is the path to your interaction definitions.
 
 	
 
@@ -111,7 +120,7 @@ As a javascript global:
 ```
 <html>
 	<head>
-		<script type="text/javascript" src="https://unpkg.com/interaction-centre@1.0.12"></script>
+		<script type="text/javascript" src="https://unpkg.com/interaction-centre"></script>
 	</head>
 
 	<body>
@@ -205,4 +214,6 @@ As a javascript global:
 
 
 #TO-DO
+
+Improve error handling
 Implement TouchInteractionHandler

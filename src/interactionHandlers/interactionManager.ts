@@ -1,5 +1,5 @@
-import {Transform} from "bj-utils"
-import {DomUtils} from "bj-utils"
+import {Transform} from "bj-utils/lib/util/transform"
+import * as DomUtils from "bj-utils/lib/util/domutils"
 import {GUIInteractionHandler} from "./guiInteractionHandler"
 import {KeyboardInteractionHandler} from "./keyboardInteractionHandler"
 import {MouseInteractionHandler} from "./mouseInteractionHandler"

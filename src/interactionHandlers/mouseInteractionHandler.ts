@@ -1,5 +1,5 @@
-import {Point} from "bj-utils"
-import {Transform} from "bj-utils"
+import {Point} from "bj-utils/lib/geometry/point"
+import {Transform} from "bj-utils/lib/util/transform"
 import {MutableMouseData} from "../mouseData"
 import {MouseButton} from "../mouseData"
 import {MouseButtonConverter} from "../mouseData"
