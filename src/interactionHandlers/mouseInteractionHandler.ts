@@ -13,6 +13,7 @@ export class MouseInteractionHandler extends InteractionHandler{
 	private _mouseData:MutableMouseData;
 	private _transformMatrix:Transform;
 	private _interactions:any;
+	private _pressedOn:boolean = false;
 	private _pressCombos:Array<MouseButtonBinding> = [];
 	private _releaseCombos:Array<MouseButtonBinding> = [];
 	private _clickCombos:Array<MouseButtonBinding> = [];
@@ -45,8 +46,6 @@ export class MouseInteractionHandler extends InteractionHandler{
 		generateBindings(InteractionEventType.release);
 		generateBindings(InteractionEventType.click);
 
-
-
 		this.stop();
 		this.start();
 	}
@@ -72,7 +71,7 @@ export class MouseInteractionHandler extends InteractionHandler{
 	public start(){
 		this._domListenerElement.addEventListener( "mousedown", this.mousePressed,  false );
 		window.addEventListener( "mouseup", this.mouseReleased,  false );
-		this._domListenerElement.addEventListener( "click"  , this.mouseClicked, false );
+		this._domListenerElement.addEventListener( "mouseup"  , this.mouseClicked, false );
 		this._domListenerElement.addEventListener("contextmenu", this.stopContextMenu);
 		
 		if(this._interactions.drag || this._interactions.move){
@@ -83,7 +82,7 @@ export class MouseInteractionHandler extends InteractionHandler{
 	public stop(){
 		this._domListenerElement.removeEventListener( "mousedown", this.mousePressed,  false );
 		window.removeEventListener( "mouseup", this.mouseReleased,  false );
-		this._domListenerElement.removeEventListener( "click"  , this.mouseClicked, false );
+		this._domListenerElement.removeEventListener( "mouseup"  , this.mouseClicked, false );
 		this._domListenerElement.removeEventListener("contextmenu", this.stopContextMenu);
 		if(this._interactions.drag || this._interactions.move){
 			this._domListenerElement.removeEventListener( "mousemove"  , this.mouseMoved );
@@ -122,15 +121,20 @@ export class MouseInteractionHandler extends InteractionHandler{
 	}
 
 	private mouseClicked = (e:MouseEvent):void =>{
-		this.mouseButtonAction(InteractionEventType.click, e);
+		if(this._pressedOn){
+			this.mouseButtonAction(InteractionEventType.click, e);
+			this._pressedOn = false;
+		}
 	}
 
 	private mousePressed = (e:MouseEvent):void =>{
 		this.mouseButtonAction(InteractionEventType.press, e);
+		this._pressedOn = true;
 	}
 
 	private mouseReleased = (e:MouseEvent):void =>{
 		this.mouseButtonAction(InteractionEventType.release, e); 
+		this._pressedOn = false;
 	}
 
 	private stopContextMenu = (e:MouseEvent):boolean =>{

@@ -1,8 +1,9 @@
 {
   "name": "interaction-centre",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "interaction centre is an interaction event manager that controls mouse, keyboard, HTML form elements, and eventually touch events. It makes creating complex interactions such as keyboard combinations, mouse control, and setting up HTML input elements easy",
-  "main": "lib/interactionCentre.js",
+  "main": "lib/interactionCentre.bundle.js",
+  "module": "src/interactionCentre.js",
   "typings": "lib/interactionCentre",
   "files": [
     "lib/"
@@ -20,11 +21,15 @@
   "author": "Ben Jack",
   "license": "ISC",
   "dependencies": {
-    "bj-utils": "^1.0.7"
+    "bj-utils": "^1.0.7",
+    "keyboardevent-key-polyfill": "^1.0.2"
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",
+    "babel-loader": "^6.4.0",
     "babel-preset-es2015": "^6.22.0",
-    "typescript": "^2.2.1"
+    "ts-loader": "^2.0.1",
+    "typescript": "^2.2.1",
+    "webpack": "^2.2.1"
   }
 }
